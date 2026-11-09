@@ -5,6 +5,7 @@ import type { PropertyValues } from "lit";
 import { css, html, LitElement, nothing } from "lit";
 import { customElement, property, state } from "lit/decorators";
 import memoizeOne from "memoize-one";
+import { getGraphColorByIndex } from "../../../common/color/colors";
 import { isComponentLoaded } from "../../../common/config/is_component_loaded";
 import { round } from "../../../common/number/round";
 import { blankBeforePercent } from "../../../common/translations/blank_before_percent";
@@ -22,6 +23,7 @@ import "../../../components/list/ha-list-nav";
 import type { ConfigEntry } from "../../../data/config_entries";
 import { subscribeConfigEntries } from "../../../data/config_entries";
 import type {
+  GpuStatus,
   HardwareInfo,
   SystemStatusStreamMessage,
 } from "../../../data/hardware";
@@ -77,6 +79,14 @@ class HaConfigHardwareOverview extends SubscribeMixin(LitElement) {
   private _memoryEntries: [number, number | null][] = [];
 
   private _cpuEntries: [number, number | null][] = [];
+
+  private _gpuEntries: Record<
+    string,
+    {
+      utilization: [number, number | null][];
+      memory: [number, number | null][];
+    }
+  > = {};
 
   public hassSubscribe(): (UnsubscribeFunc | Promise<UnsubscribeFunc>)[] {
     const subs = [
@@ -135,6 +145,8 @@ class HaConfigHardwareOverview extends SubscribeMixin(LitElement) {
               new Date(message.timestamp).getTime(),
               message.cpu_percent,
             ]);
+
+            this._updateGpuEntries(message);
 
             this._systemStatusData = message;
           },
@@ -454,13 +466,142 @@ class HaConfigHardwareOverview extends SubscribeMixin(LitElement) {
                           : nothing
                       }
                     </div>
-                  </ha-card>`
+                  </ha-card>
+                  ${(this._systemStatusData?.gpus ?? []).map((gpu) =>
+                    this._renderGpu(gpu)
+                  )}`
               : nothing
           }
         </div>
       </hass-tabs-subpage>
     `;
   }
+
+  private _updateGpuEntries(message: SystemStatusStreamMessage) {
+    const timestamp = new Date(message.timestamp).getTime();
+    const addresses = new Set<string>();
+
+    for (const gpu of message.gpus ?? []) {
+      addresses.add(gpu.address);
+      // Start with an empty history, so the graph draws from the right
+      const entries = (this._gpuEntries[gpu.address] ??= {
+        utilization: this._cpuEntries.map(([time]) => [time, null]),
+        memory: this._cpuEntries.map(([time]) => [time, null]),
+      });
+      entries.utilization.shift();
+      entries.memory.shift();
+      entries.utilization.push([timestamp, gpu.utilization_percent]);
+      entries.memory.push([
+        timestamp,
+        gpu.memory_used_mb !== null && gpu.memory_total_mb
+          ? round((gpu.memory_used_mb / gpu.memory_total_mb) * 100, 1)
+          : null,
+      ]);
+    }
+
+    for (const address of Object.keys(this._gpuEntries)) {
+      if (!addresses.has(address)) {
+        delete this._gpuEntries[address];
+      }
+    }
+  }
+
+  private _renderGpu(gpu: GpuStatus) {
+    const entries = this._gpuEntries[gpu.address];
+    const percent = blankBeforePercent(this.hass.locale) + "%";
+
+    return html`<ha-card outlined>
+      <div class="header">
+        <div class="title">${gpu.name}</div>
+        <div class="value">
+          ${
+            gpu.utilization_percent !== null
+              ? html`${round(gpu.utilization_percent, 0)}${percent}`
+              : "-"
+          }
+        </div>
+      </div>
+      ${
+        entries &&
+        (gpu.utilization_percent !== null || gpu.memory_total_mb !== null)
+          ? html`<div class="card-content">
+              <ha-chart-base
+                .data=${this._getGpuChartData(entries.utilization, entries.memory)}
+                .options=${this._chartOptions}
+              ></ha-chart-base>
+            </div>`
+          : nothing
+      }
+      <div class="gpu-details">
+        ${
+          gpu.memory_used_mb !== null && gpu.memory_total_mb !== null
+            ? html`<div class="gpu-detail">
+                <span
+                  >${this.hass.localize(
+                    "ui.panel.config.hardware.gpu.memory"
+                  )}</span
+                >
+                <span
+                  >${round(gpu.memory_used_mb / 1024, 1)} GB /
+                  ${round(gpu.memory_total_mb / 1024, 0)} GB</span
+                >
+              </div>`
+            : nothing
+        }
+        ${
+          gpu.temperature !== null
+            ? html`<div class="gpu-detail">
+                <span
+                  >${this.hass.localize(
+                    "ui.panel.config.hardware.gpu.temperature"
+                  )}</span
+                >
+                <span>${round(gpu.temperature, 0)} °C</span>
+              </div>`
+            : nothing
+        }
+        ${
+          gpu.power !== null
+            ? html`<div class="gpu-detail">
+                <span
+                  >${this.hass.localize("ui.panel.config.hardware.gpu.power")}</span
+                >
+                <span>${round(gpu.power, 1)} W</span>
+              </div>`
+            : nothing
+        }
+        <div class="gpu-detail">
+          <span
+            >${this.hass.localize("ui.panel.config.hardware.gpu.driver")}</span
+          >
+          <span>${gpu.driver} ${gpu.driver_version}</span>
+        </div>
+      </div>
+    </ha-card>`;
+  }
+
+  private _getGpuChartData = memoizeOne(
+    (
+      utilization: [number, number | null][],
+      memory: [number, number | null][]
+    ): SeriesOption[] => [
+      {
+        ...DATA_SET_CONFIG,
+        id: "gpu_utilization",
+        name: this.hass.localize("ui.panel.config.hardware.gpu.utilization"),
+        data: utilization,
+      } as SeriesOption,
+      {
+        ...DATA_SET_CONFIG,
+        id: "gpu_memory",
+        name: this.hass.localize("ui.panel.config.hardware.gpu.memory"),
+        color: getGraphColorByIndex(1, getComputedStyle(this)),
+        areaStyle: undefined,
+        lineStyle: { width: 1, type: "dashed" },
+        data: memory,
+      } as SeriesOption,
+    ]
+  );
 
   private async _load() {
     if (isComponentLoaded(this.hass.config, "usb")) {
@@ -591,6 +732,18 @@ class HaConfigHardwareOverview extends SubscribeMixin(LitElement) {
 
       ha-alert {
         --ha-alert-icon-size: 24px;
+      }
+
+      .gpu-details {
+        padding: 0 16px 16px;
+      }
+      .gpu-detail {
+        display: flex;
+        justify-content: space-between;
+        padding: 4px 0;
+      }
+      .gpu-detail span:first-child {
+        color: var(--secondary-text-color);
       }
     `,
   ];

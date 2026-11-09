@@ -48,10 +48,25 @@ export interface HardwareInfoDongleInfo {
   serial_number: string | null;
 }
 
+export interface GpuStatus {
+  address: string;
+  name: string;
+  vendor: string;
+  driver: string;
+  driver_version: string;
+  utilization_percent: number | null;
+  memory_used_mb: number | null;
+  memory_total_mb: number | null;
+  temperature: number | null;
+  power: number | null;
+}
+
 export interface SystemStatusStreamMessage {
   cpu_percent: number;
   memory_free_mb: number;
   memory_used_mb: number;
   memory_used_percent: number;
+  // Not sent by Home Assistant versions without GPU support
+  gpus?: GpuStatus[];
   timestamp: string;
 }

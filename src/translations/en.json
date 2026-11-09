@@ -5083,6 +5083,13 @@
           "reboot_moved_link": "Go to system page.",
           "processor": "Processor",
           "memory": "Memory",
+          "gpu": {
+            "utilization": "Utilization",
+            "memory": "Video memory",
+            "temperature": "Temperature",
+            "power": "Power",
+            "driver": "Driver"
+          },
           "generic_hardware": "Generic hardware",
           "documentation": "Documentation",
           "configure": "Configure",
