@@ -192,7 +192,9 @@ class HaConfigHardwareOverview extends SubscribeMixin(LitElement) {
         tooltip: {
           trigger: "axis",
           valueFormatter: (value) =>
-            value + blankBeforePercent(this.hass.locale) + "%",
+            value === null || value === undefined
+              ? "—"
+              : value + blankBeforePercent(this.hass.locale) + "%",
         },
       };
     }
@@ -484,19 +486,26 @@ class HaConfigHardwareOverview extends SubscribeMixin(LitElement) {
     for (const gpu of message.gpus ?? []) {
       addresses.add(gpu.address);
       // Start with an empty history, so the graph draws from the right
-      const entries = (this._gpuEntries[gpu.address] ??= {
+      const entries = this._gpuEntries[gpu.address] ?? {
         utilization: this._cpuEntries.map(([time]) => [time, null]),
         memory: this._cpuEntries.map(([time]) => [time, null]),
-      });
-      entries.utilization.shift();
-      entries.memory.shift();
-      entries.utilization.push([timestamp, gpu.utilization_percent]);
-      entries.memory.push([
-        timestamp,
-        gpu.memory_used_mb !== null && gpu.memory_total_mb
-          ? round((gpu.memory_used_mb / gpu.memory_total_mb) * 100, 1)
-          : null,
-      ]);
+      };
+      // New arrays, the chart only redraws when its data changes
+      this._gpuEntries[gpu.address] = {
+        utilization: [
+          ...entries.utilization.slice(1),
+          [timestamp, gpu.utilization_percent],
+        ],
+        memory: [
+          ...entries.memory.slice(1),
+          [
+            timestamp,
+            gpu.memory_used_mb !== null && gpu.memory_total_mb
+              ? round((gpu.memory_used_mb / gpu.memory_total_mb) * 100, 1)
+              : null,
+          ],
+        ],
+      };
     }
 
     for (const address of Object.keys(this._gpuEntries)) {
