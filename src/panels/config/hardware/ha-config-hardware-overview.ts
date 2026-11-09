@@ -485,26 +485,32 @@ class HaConfigHardwareOverview extends SubscribeMixin(LitElement) {
 
     for (const gpu of message.gpus ?? []) {
       addresses.add(gpu.address);
-      // Start with an empty history, so the graph draws from the right
+      // Start with an empty history, so the graph draws from the right. The
+      // CPU history already holds the timestamp of this message.
+      const emptyHistory = (): [number, number | null][] =>
+        this._cpuEntries
+          .filter(([time]) => time < timestamp)
+          .map(([time]) => [time, null]);
       const entries = this._gpuEntries[gpu.address] ?? {
-        utilization: this._cpuEntries.map(([time]) => [time, null]),
-        memory: this._cpuEntries.map(([time]) => [time, null]),
+        utilization: emptyHistory(),
+        memory: emptyHistory(),
       };
+      const length = this._cpuEntries.length;
       // New arrays, the chart only redraws when its data changes
       this._gpuEntries[gpu.address] = {
         utilization: [
-          ...entries.utilization.slice(1),
-          [timestamp, gpu.utilization_percent],
-        ],
+          ...entries.utilization,
+          [timestamp, gpu.utilization_percent] as [number, number | null],
+        ].slice(-length),
         memory: [
-          ...entries.memory.slice(1),
+          ...entries.memory,
           [
             timestamp,
             gpu.memory_used_mb !== null && gpu.memory_total_mb
               ? round((gpu.memory_used_mb / gpu.memory_total_mb) * 100, 1)
               : null,
-          ],
-        ],
+          ] as [number, number | null],
+        ].slice(-length),
       };
     }
 
