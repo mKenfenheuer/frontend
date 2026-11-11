@@ -170,7 +170,6 @@ overrides:
   tslib: 2.9.1
 
 patchedDependencies:
-  '@material/mwc-list@0.27.0': 9450e509a86887d8f68ca9cf3f81e6ed70e94e49de13c5f6f20f94519ad4a987
   echarts@6.1.0: 4c014bd1952b4d1f21311ed2212dc87192e70b6e782597ecc7a485270247bbb5
   sortablejs@1.15.7: f25f02dcc8720341c3cfac312e0502081328108270852ad039187c2c5e2ea432
   tinykeys@4.0.1: cdc7ece96d53357d38ff3c124a2553f86e3a5dc333d641d223eb6f07e28275f0
@@ -278,10 +277,7 @@ importers:
         version: 1.0.3
       '@maplibre/maplibre-gl-leaflet':
         specifier: 0.1.4
-        version: 0.1.4(@types/leaflet@1.9.22)(leaflet@1.9.4)(maplibre-gl@6.16.0)
-      '@material/mwc-list':
-        specifier: 0.27.0
-        version: 0.27.0(patch_hash=9450e509a86887d8f68ca9cf3f81e6ed70e94e49de13c5f6f20f94519ad4a987)
+        version: 0.1.4(@types/leaflet@1.9.22)(leaflet@1.9.4)(maplibre-gl@6.17.0)
       '@mdi/js':
         specifier: 7.4.47
         version: 7.4.47
@@ -295,20 +291,20 @@ importers:
         specifier: 0.5.24
         version: 0.5.24
       '@tsparticles/engine':
-        specifier: 4.5.2
-        version: 4.5.2
+        specifier: 4.5.3
+        version: 4.5.3
       '@tsparticles/preset-links':
-        specifier: 4.5.2
-        version: 4.5.2
+        specifier: 4.5.3
+        version: 4.5.3
       '@versatiles/style':
-        specifier: 8.1.1
-        version: 8.1.1(maplibre-gl@6.16.0)
+        specifier: 9.0.0
+        version: 9.0.0(maplibre-gl@6.17.0)
       '@vibrant/color':
         specifier: 4.0.4
         version: 4.0.4
       '@vvo/tzdb':
-        specifier: 6.202.0
-        version: 6.202.0
+        specifier: 6.204.0
+        version: 6.204.0
       '@webcomponents/scoped-custom-element-registry':
         specifier: 0.0.10
         version: 0.0.10
@@ -328,8 +324,8 @@ importers:
         specifier: 3.51.0
         version: 3.51.0
       cropperjs:
-        specifier: 1.7.0
-        version: 1.7.0
+        specifier: 2.3.1
+        version: 2.3.1
       culori:
         specifier: 4.0.2
         version: 4.0.2
@@ -388,8 +384,8 @@ importers:
         specifier: 3.3.3
         version: 3.3.3
       maplibre-gl:
-        specifier: 6.16.0
-        version: 6.16.0
+        specifier: 6.17.0
+        version: 6.17.0
       marked:
         specifier: 18.1.3
         version: 18.1.3
@@ -500,8 +496,8 @@ importers:
         specifier: workspace:*
         version: link:packages/components
       '@html-eslint/eslint-plugin':
-        specifier: 0.67.0
-        version: 0.67.0(eslint@10.14.0(supports-color@8.1.1))
+        specifier: 0.68.0
+        version: 0.68.0(eslint@10.14.0(supports-color@8.1.1))
       '@lokalise/node-api':
         specifier: 17.0.1
         version: 17.0.1
@@ -599,8 +595,8 @@ importers:
         specifier: 0.13.11
         version: 0.13.11(supports-color@8.1.1)
       eslint-plugin-import-x:
-        specifier: 4.17.1
-        version: 4.17.1(@typescript-eslint/utils@8.72.1(eslint@10.14.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(eslint@10.14.0(supports-color@8.1.1))(supports-color@8.1.1)
+        specifier: 4.18.0
+        version: 4.18.0(@typescript-eslint/utils@8.72.1(eslint@10.14.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(eslint@10.14.0(supports-color@8.1.1))(supports-color@8.1.1)
       eslint-plugin-lit:
         specifier: 2.3.1
         version: 2.3.1(eslint@10.14.0(supports-color@8.1.1))
@@ -683,8 +679,8 @@ importers:
         specifier: 5.2.2
         version: 5.2.2(@rspack/core@2.3.1(@swc/helpers@0.5.24))
       serve:
-        specifier: 14.2.6
-        version: 14.2.6(supports-color@8.1.1)
+        specifier: 14.2.7
+        version: 14.2.7(supports-color@8.1.1)
       sinon:
         specifier: 22.1.0
         version: 22.1.0
@@ -1867,6 +1863,39 @@ packages:
     peerDependencies:
       commander: ~15.0.0
 
+  '@cropper/element-canvas@2.3.1':
+    resolution: {integrity: sha512-UH3VMyjn58PdwYkPiTHuvRUjGzmyKr6E2pYWxTxN/04wnjgYLA77B5u5c1HhV6vD1ZKSvxJ/i9TkiySR9P1D6A==}
+
+  '@cropper/element-crosshair@2.3.1':
+    resolution: {integrity: sha512-Vz2heRwr2nd2rZ161vKyE4JwYV3eSodGCGGZq39TR0LICGOOeggLq0R664Af/eFB9PU8+tfJ42lWLoUdxQlVJQ==}
+
+  '@cropper/element-grid@2.3.1':
+    resolution: {integrity: sha512-6LDaUDxH2xdA7biTcqnihPQVHjlT4bXysA403s9rU4jo5f4pPnFHtNbB+FQTYKNz5EKun52WgVtR+6oWbmbxlg==}
+
+  '@cropper/element-handle@2.3.1':
+    resolution: {integrity: sha512-ygLw89PWu9k8SuKW7rjRBpD6ZfmtVr5ayWux9YKHU7PxX0SeL5kbCD+PpOxQB1ycW4UcyH0tHt77EWnsdSoOHw==}
+
+  '@cropper/element-image@2.3.1':
+    resolution: {integrity: sha512-rPE7OX/BPTw66+DjpN5aOuPb1xSAjQMgAJZXdRgmeJnn0YcDDhfGQm8VwcL8/PMLxtWFcKEM+aUiezbO01j4fg==}
+
+  '@cropper/element-selection@2.3.1':
+    resolution: {integrity: sha512-b8sabaFbHeQYY459uItDIeDY0IisZBO/wF+SYhKvAgI8TExj/f2mNcBZXjPHYCkWel2+1BSUTTNZxy+tR8sDEA==}
+
+  '@cropper/element-shade@2.3.1':
+    resolution: {integrity: sha512-X5ceZsy7iBxuIRhsL05H9+cPYzxZuvM7/9j5irXIbNsDiNwTedxIHdjhEhPbUYa+FaNn9wsKId24AEyH43JTGw==}
+
+  '@cropper/element-viewer@2.3.1':
+    resolution: {integrity: sha512-EdrYDbnkj0IOl/kyWKzzvcDRobr7Tfzho7FkVu8mpSk1ILDHmVf8pfZrYVwou8l4znLqp8ZqwuabAezJPfC2Yg==}
+
+  '@cropper/element@2.3.1':
+    resolution: {integrity: sha512-CgrLOx0qERWlfJK1Ed6ePq7SXcB6gLHtj3mtDVypyzti70fJdmNxrFm5Ucbq8vpp2Yo3tW2L6uDI0IBDoiT17A==}
+
+  '@cropper/elements@2.3.1':
+    resolution: {integrity: sha512-+D5rFlfFlWSL1lp0vPYI59/R6XM2vMnTSX0/B1zKRvmkc0t0N0m9lxVsaDb+9RkHx6PwAkBBNPZSRUeau33jMg==}
+
+  '@cropper/utils@2.3.1':
+    resolution: {integrity: sha512-b5qFTwws/osx0asIGLK1V//hdL08frGvfpi6s+p6zj5XH05ofVcz0Xl+Tot7sUx12pbfhhAlsquQTOJ1IsOoFw==}
+
   '@ctrl/tinycolor@4.1.0':
     resolution: {integrity: sha512-WyOx8cJQ+FQus4Mm4uPIZA64gbk3Wxh0so5Lcii0aJifqwoVOlfFtorjLE0Hen4OYyHZMXDWqMmaQemBhgxFRQ==}
     engines: {node: '>=14'}
@@ -2079,27 +2108,27 @@ packages:
     resolution: {integrity: sha512-EX1qiX5h3LAoTjuE3rgfuRlNq3Rds5tGrgDGlHoFbxhXaCSTTtuYU6tdR8vgOXKGUDi5gBDrcoNdLYKFXSrknA==}
     engines: {node: '>=14.17.0'}
 
-  '@html-eslint/core@0.67.0':
-    resolution: {integrity: sha512-MPoKw4woCkuFYs2xdt0vEjzGbUzU8lxeTZkxyrtHM+zZlaK/u/lqcIapZmyCTQBqNE0H9J8zc9TmXjygfHcuXg==}
+  '@html-eslint/core@0.68.0':
+    resolution: {integrity: sha512-u3HioqcKIH6dVQp2uulmpcuUqgKLqiuOWyHAl7hV4hIUkuJ3ge7vEUwPoWvNRbfy3aWOMygttokdGxL5q9YFIg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@html-eslint/eslint-plugin@0.67.0':
-    resolution: {integrity: sha512-gr2wKoS1OOZa6uL8DDNCjvPyTu6mWsyQJ/WXmvP/DeFRe6pdumsb8ePYfP7qZW5741MtVd0OpLbxa82XivxxWQ==}
+  '@html-eslint/eslint-plugin@0.68.0':
+    resolution: {integrity: sha512-fiR8UTYBr4+fGftEG1u+tT3AiuOSowvSZbsY4tLcMl9hOuFzquHw4BIaFFlV3xTeqF5Y0M69aPJoEhFJUkQyog==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=8.0.0 || ^10.0.0-0'
 
-  '@html-eslint/parser@0.67.0':
-    resolution: {integrity: sha512-ejdtqLqclQPDfivgsD2yWHXa+FyyEytMlGNNfiHw/UbUeV9tn1hBjIZLJ5VvzjO0IweaAIWIZKlEPgKT6tYP8A==}
+  '@html-eslint/parser@0.68.0':
+    resolution: {integrity: sha512-X22bU2qzEpzPI0bHtnfXzoUS8q/It/DNycJnIdsPzBDXcly+PItV5AJU4nm/+9FZCXSE3IZJvORRCTuvvpV8Bg==}
 
-  '@html-eslint/template-parser@0.67.0':
-    resolution: {integrity: sha512-fvFAuAaKzkg9deV69uT1NoVJSwXTu3mvGDWzlZKe+xwm5JnkbWC626eyDRlAQDzff2/zX7tWFq4EMgOoZmgtRA==}
+  '@html-eslint/template-parser@0.68.0':
+    resolution: {integrity: sha512-zLgikGAF7izvrvUefy5EBEl6WpM0sTN9xzldwp7UgkkjR+zaFvqi9YsOWj+Y7Tu3XMXI0d7Gxv7PPPumVmJTuw==}
 
-  '@html-eslint/template-syntax-parser@0.67.0':
-    resolution: {integrity: sha512-leHUXnpFgRSR3o7rpw5OtOVGfzcChIgrhXDgPlBwdoL7V4+5KZjxGLJAPVwbj7sVVNrSWynlIQ1Wn4FuNKxZhw==}
+  '@html-eslint/template-syntax-parser@0.68.0':
+    resolution: {integrity: sha512-qbIF3MqmRckg6pXhwY/Ytxnb0eOoq5LPVt9wq8N4UBQHxL2z4cF407FHAiLNhpy8DO4AJUQbI6IZzhN8fHkvPA==}
 
-  '@html-eslint/types@0.67.0':
-    resolution: {integrity: sha512-8w9V0sTm2DGLh2uslL7+Un9g/FHNcevgouiTLhlAJoBhhGOK5+fX76QCKdWbgmpudNGo8Nh1kHKsJP3a6twzXA==}
+  '@html-eslint/types@0.68.0':
+    resolution: {integrity: sha512-FW+FjFHp/w1V4uZ0us7keR6mAA+WGh6OsHvJ+Kzy8aBeogyOapDPEMT+zkXSsiJ+V9maJ6umqG20BXcs2y6lsw==}
 
   '@humanfs/core@0.19.2':
     resolution: {integrity: sha512-UhXNm+CFMWcbChXywFwkmhqjs3PRCmcSa/hfBgLIb7oQ5HNb1wS0icWsGtSAUNgefHeI+eBrA8I1fxmbHsGdvA==}
@@ -2317,68 +2346,6 @@ packages:
 
   '@marijn/find-cluster-break@1.0.3':
     resolution: {integrity: sha512-FY+MKLBoTsLNJF/eLWaOsXGdz6uh3Iu1axjPf6TUq92IYumcTcXWHoS747JARLkcdlJ/Waiaxc5wQfFO8jC6NA==}
-
-  '@material/animation@14.0.0-canary.53b3cad2f.0':
-    resolution: {integrity: sha512-GBuR4VmcTQW1D0lPXEosf5Giho72LLbyGIydWGtaEUtLJoive/D9kFkwTN4Fsyt9Kkl7hbhs35vrNe6QkAH4/Q==}
-
-  '@material/base@14.0.0-canary.53b3cad2f.0':
-    resolution: {integrity: sha512-UJKbXwZtkrA3sfQDmj8Zbw1Q3Tqtl6KdfVFws95Yf7TCUgTFzbZI/FSx1w7dVugQPOEnIBuZnzqZam/MtHkx4w==}
-
-  '@material/density@14.0.0-canary.53b3cad2f.0':
-    resolution: {integrity: sha512-Eh/vZ3vVyqtpylg5Ci33qlgtToS4H1/ppd450Ib3tcdISIoodgijYY0w4XsRvrnZgbI/h/1STFdLxdzS0UNuFw==}
-
-  '@material/dom@14.0.0-canary.53b3cad2f.0':
-    resolution: {integrity: sha512-aR+rfncF6oi2ivdOlKSJI4UXwNzWV5rXM88MLDoSJF1D7lXxhAKhge+tMUBodWGV/q0+FnXLuVAa0WYTrKjo+A==}
-
-  '@material/feature-targeting@14.0.0-canary.53b3cad2f.0':
-    resolution: {integrity: sha512-fn7Af3PRyARtNeYqtjxXmE3Y/dCpnpQVWWys57MqiGR/nvc6qpgOfJ6rOdcu/MrOysOE/oebTUDmDnTmwpe9Hw==}
-
-  '@material/focus-ring@14.0.0-canary.53b3cad2f.0':
-    resolution: {integrity: sha512-exPX5VrjQimipBwgcFDGRiEE783sOBgpkFui59A6i6iGvS2UrLHlYY2E65fyyyQnD1f/rv4Po1OOnCesE1kulg==}
-
-  '@material/list@14.0.0-canary.53b3cad2f.0':
-    resolution: {integrity: sha512-mkMpltSKAYLBtFnTTCk/mQIDzwxF/VLh1gh59ehOtmRXt7FvTz83RoAa4tqe53hpVrbX4HoLDBu+vILhq/wkjw==}
-
-  '@material/mwc-base@0.27.0':
-    resolution: {integrity: sha512-oCWWtjbyQ52AaUbzINLGBKScIPyqhps2Y7c8t6Gu6fcFeDxhKXMV1Cqvtj/OMhtAt53XjHfD2XruWwYv3cYYUA==}
-    deprecated: MWC beta is longer supported. Please upgrade to @material/web
-
-  '@material/mwc-checkbox@0.27.0':
-    resolution: {integrity: sha512-EY0iYZLwo8qaqMwR5da4fdn0xI0BZNAvKTcwoubYWpDDHlGxDcqwvjp/40ChGo3Q/zv8/4/A0Qp7cwapI82EkA==}
-    deprecated: MWC beta is longer supported. Please upgrade to @material/web
-
-  '@material/mwc-list@0.27.0':
-    resolution: {integrity: sha512-oAhNQsBuAOgF3ENOIY8PeWjXsl35HoYaUkl0ixBQk8jJP2HIEf+MdbS5688y/UXxFbSjr0m//LfwR5gauEashg==}
-    deprecated: MWC beta is longer supported. Please upgrade to @material/web
-
-  '@material/mwc-radio@0.27.0':
-    resolution: {integrity: sha512-+rSO9a373BgyMgQOM0Z8vVkuieobBylPJ8qpltytM+yGPj8+n+MtwRZyg+ry3WwEjYYDMP6GxZPHwLgWs6lMpQ==}
-    deprecated: MWC beta is longer supported. Please upgrade to @material/web
-
-  '@material/mwc-ripple@0.27.0':
-    resolution: {integrity: sha512-by0O8d8g3Rd96/sUB8hxy6MrDx1QTstqOsA64vqypWd526hMTBGRik08jTNap5sVIyrN9Vq17jb4NJLWQLnNHQ==}
-    deprecated: MWC beta is longer supported. Please upgrade to @material/web
-
-  '@material/radio@14.0.0-canary.53b3cad2f.0':
-    resolution: {integrity: sha512-V/AgWEOuHFoh9d4Gq1rqBZnKSGtMLQNh23Bwrv0c1FhPqFvUpwt9jR3SVwhJk5gvQQWGy9p3iiGc9QCJ+0+P8Q==}
-
-  '@material/ripple@14.0.0-canary.53b3cad2f.0':
-    resolution: {integrity: sha512-6g2G62vd8DsMuIUSXlRrzb98qkZ4o8ZREknNwNP2zaLQEOkJ//4j9HaqDt98/3LIjUTY9UIVFTQENiMmlwKHYQ==}
-
-  '@material/rtl@14.0.0-canary.53b3cad2f.0':
-    resolution: {integrity: sha512-f08LT0HSa0WYU+4Jz/tbm1TQ9Fcf2k+H6dPPYv0J1sZmX6hMgCEmNiUdUFLQFvszoXx2XrRi1/hIFjbz2e69Yg==}
-
-  '@material/shape@14.0.0-canary.53b3cad2f.0':
-    resolution: {integrity: sha512-RyjInLCNe+nI/ulKea0ZLHphXQDiDqYazS25SRn18g8Hoa5qGNaY5oOBncDXUYn3jm5oI5kFc9oif//kulkbjg==}
-
-  '@material/theme@14.0.0-canary.53b3cad2f.0':
-    resolution: {integrity: sha512-S06XAevDCDWMe+GgsEpITMS07imUidzadNaTbJsqssFajBLr53QWVZsG84BpjXKXoYvyEJvb0hX5U0lq6ip9UQ==}
-
-  '@material/touch-target@14.0.0-canary.53b3cad2f.0':
-    resolution: {integrity: sha512-d83e5vbqoLyL542yOTTp4TLVltddWiqbI/j1w/D9ipE30YKfe2EDN+CNJc32Zufh5IUfK41DsZdrN8fI9cL99A==}
-
-  '@material/typography@14.0.0-canary.53b3cad2f.0':
-    resolution: {integrity: sha512-9J0k2fq7uyHsRzRqJDJLGmg3YzRpfRPtFDVeUH/xBcYoqpZE7wYw5Mb7s/l8eP626EtR7HhXhSPjvRTLA6NIJg==}
 
   '@mdi/js@7.4.47':
     resolution: {integrity: sha512-KPnNOtm5i2pMabqZxpUz7iQf+mfrYZyKCZ8QNz85czgEt7cuHcGorWfdzUMWYA0SD+a6Hn4FmJ+YhzzzjkTZrQ==}
@@ -3336,85 +3303,85 @@ packages:
     resolution: {integrity: sha512-/67zpWDBLV+oYAEL682s1ktXL0HgqX76f6gaVGkGnVZlBbm1zd0v4Bz8MFF2GGhoX9rvfq3KSQHubFHwa6w6/Q==}
     engines: {node: '>=12'}
 
-  '@tsparticles/animation-utils@4.5.2':
-    resolution: {integrity: sha512-bwvu84lMX5Sp79pyKu5yW2SFAqY52B7OlaxDjeeP3TiO7hJLFWxd8VPmSfOarcYK/z/uxp/dZfbcvp/5ylXyiQ==}
+  '@tsparticles/animation-utils@4.5.3':
+    resolution: {integrity: sha512-Fz2bTDc6Folav8isOk2scXM+LCSPhQ9hD8xCSmsEGuGH7JkE+XTsS4j6E9H6b+RFlZ1yb2TxdVBJnfXy8XM9Bw==}
     peerDependencies:
-      '@tsparticles/engine': 4.5.2
+      '@tsparticles/engine': 4.5.3
 
-  '@tsparticles/basic@4.5.2':
-    resolution: {integrity: sha512-lA+GP2EN5uN3TnOMEFqYBS0yLuQyZ2UlHy72TedgREGeEsrUoXB/FtZKseVt0g9FId4ZI6jXizxEavs65PbUsA==}
+  '@tsparticles/basic@4.5.3':
+    resolution: {integrity: sha512-f0gHWnqChK4ksE9Bq3YN0iuJVMi2B81YSkCL5BrohuykoaKCLSVVSqjhefmELTMrdiFVsdt6WPJ+HjVQgjt7CA==}
 
-  '@tsparticles/canvas-utils@4.5.2':
-    resolution: {integrity: sha512-NaxB1X/90lSu+uI0ayaaNC4okLIwJ93nBWvrdYHQ5/xsyan01qU+rnDjdg8Y9fPewncXlHkOaQezHeG4RjDubg==}
+  '@tsparticles/canvas-utils@4.5.3':
+    resolution: {integrity: sha512-kbZoUA2uqR2043FHfH2+KFz7JhYTZjyTeDqVL/Z3z38mfdHEVrOJ4q+mwYjr+hX4tq2YoLf1D4DA6w/er1AlKA==}
     peerDependencies:
-      '@tsparticles/engine': 4.5.2
+      '@tsparticles/engine': 4.5.3
 
-  '@tsparticles/engine@4.5.2':
-    resolution: {integrity: sha512-JmaqBMZW/OzXGeQBz1g67EwTKeOYccIFrQMnBmiZgavO7LLhglABpyTWJAT9Cb7M/kgx3GIecZGkPxFzQ44pxQ==}
+  '@tsparticles/engine@4.5.3':
+    resolution: {integrity: sha512-ak8AAPQKinJlwztRAo+OA5ItwjLtymmjayefQCF6K1FIWs5SaWiHWbzMB5vdOvuGUE6OOchqj8NLcu3HfHmdjw==}
 
-  '@tsparticles/interaction-particles-links@4.5.2':
-    resolution: {integrity: sha512-kNwh59Oyi8lvFQYK9z4YgAhS0GcOfFLkIhafTo0qlklqSUl3CvZq0aS14t368oz4Qk/l29pvnLJQg8pmRxIMaw==}
+  '@tsparticles/interaction-particles-links@4.5.3':
+    resolution: {integrity: sha512-NAm9yL8o3oaeYgB7WLzuoD0yfLw9kvEwu0N+UHTwoe+kYRLJvmoUyMlED7hPQHW74VTlSmuZ6gqWTnaOv1mFLA==}
     peerDependencies:
-      '@tsparticles/engine': 4.5.2
-      '@tsparticles/plugin-interactivity': 4.5.2
+      '@tsparticles/engine': 4.5.3
+      '@tsparticles/plugin-interactivity': 4.5.3
 
-  '@tsparticles/plugin-blend@4.5.2':
-    resolution: {integrity: sha512-7mO9tpJvXkbRIn4OjjUNoiPKAEJkEeazLl8eQB9W9lYpxuNCyZZ+sXJpS2LazyBNKTvGy1P0ekoX/rHqc84vKA==}
+  '@tsparticles/plugin-blend@4.5.3':
+    resolution: {integrity: sha512-fJJp0xVEeGQDpkjGzvftMbCrLWtwqo+ees49gCnr9SZYVMRbxi3vQYukvi4ULOzYgEW5bTseVprDfiqOwfQJcw==}
     peerDependencies:
-      '@tsparticles/engine': 4.5.2
+      '@tsparticles/engine': 4.5.3
 
-  '@tsparticles/plugin-hex-color@4.5.2':
-    resolution: {integrity: sha512-gzcPgOzb3vP3p1AF/op5045buNYjsUOHoeTx9WHABrbDDVrQYUo1KsThg6Uo6Uahd8yMIuWUDlzjgF722KBn0w==}
+  '@tsparticles/plugin-hex-color@4.5.3':
+    resolution: {integrity: sha512-k+AkTG8r2UTE3n2u4kmb9dODRVtBc3Yttk7/UQ5HPlcBMr8AnKbx9gyxzzCx2MaEFZG2My0cghJPvQvibrAW7Q==}
     peerDependencies:
-      '@tsparticles/engine': 4.5.2
+      '@tsparticles/engine': 4.5.3
 
-  '@tsparticles/plugin-hsl-color@4.5.2':
-    resolution: {integrity: sha512-/gIqWofLBYLcYcEGt1jxZPD+kgCJOoajS22NxxbVi80MrUxvT586qqbhYiiAesBxRUgCZOJnK39BF2S4A0Ik7Q==}
+  '@tsparticles/plugin-hsl-color@4.5.3':
+    resolution: {integrity: sha512-jfyHjPvrc8ORwaiIJ3xgzIveRhlImn21TiblpakeF2Ft5HgxJ+Lb8eIN/2VUJFjdqLpQ3H1nGSJspHYzeU5RtQ==}
     peerDependencies:
-      '@tsparticles/engine': 4.5.2
+      '@tsparticles/engine': 4.5.3
 
-  '@tsparticles/plugin-interactivity@4.5.2':
-    resolution: {integrity: sha512-uzZGjqxFhz/LUAKnbBYApgelXBrXSJt25fad8TxL5RoDVGgd22pxPErwEtCTAbhJyL6Z5Clj9p5vk9Vve+sodg==}
+  '@tsparticles/plugin-interactivity@4.5.3':
+    resolution: {integrity: sha512-4w1m8WFL5UJElwTO978P9fOub2vtLCYRLD0YpmXY+AumZw02wLRH6Al7xY2Sgchbgm/uLHkCDzeUTYUi9GzURg==}
     peerDependencies:
-      '@tsparticles/engine': 4.5.2
+      '@tsparticles/engine': 4.5.3
 
-  '@tsparticles/plugin-move@4.5.2':
-    resolution: {integrity: sha512-Oh2FPN26M+JlSFvLr7rOJEyTO7n0AUu5x3gHCx4mX9Dqm0JQsL0T17nUMc8pra/nHOemiK3W+dCIm0Y7/8GQiQ==}
+  '@tsparticles/plugin-move@4.5.3':
+    resolution: {integrity: sha512-kyriGuLkOu5uVv3cHRacJRk8XMm9gga7OzCuf3oxbgfqqIaazva4Qw8N19RCpVCW1EfwyWFGq3h5VD/QplkA0w==}
     peerDependencies:
-      '@tsparticles/engine': 4.5.2
+      '@tsparticles/engine': 4.5.3
 
-  '@tsparticles/plugin-rgb-color@4.5.2':
-    resolution: {integrity: sha512-y6s2yant8vBdvIw6chTlPVxf9T5lzdmpSyEsI6gX3obTSaJyhw6nbfl6iWcQNx1jjgp4dYVhEf8PneNMqC8VQw==}
+  '@tsparticles/plugin-rgb-color@4.5.3':
+    resolution: {integrity: sha512-lKlI9BaHXy+L30d2CKWWn3B9Ye7LOqRHav8rzXcxAQMfZxj4iK1UuGRT+27/KzQMZBYMPd9G4R7x7lV8RngFdQ==}
     peerDependencies:
-      '@tsparticles/engine': 4.5.2
+      '@tsparticles/engine': 4.5.3
 
-  '@tsparticles/preset-links@4.5.2':
-    resolution: {integrity: sha512-WH8dfjSMWa5uCzheemqy+UzQXIpIymWVrnBOK3L3eBusYFhAg3L0ChBhjKBDjPDlKOquoeRrdt5D8ebgBjlY8g==}
+  '@tsparticles/preset-links@4.5.3':
+    resolution: {integrity: sha512-U21Aj8pPjxW7wEH1Itm7Ik1rBO5rTXyxKWLjZXEDlT1agXxcwCVbL/5rffUQzbeRFAk/t4KiUGi4rTvAS62wTQ==}
 
-  '@tsparticles/shape-circle@4.5.2':
-    resolution: {integrity: sha512-D6sKXKLPZZ45csOfj3mUQ1bzBgO5mJw7qfpAIYLlk7H+slrHlIoOwxwWgwcuBTY7JJ0jLgiq2062yLHxjEfdeA==}
+  '@tsparticles/shape-circle@4.5.3':
+    resolution: {integrity: sha512-jtJAqqnltG12YCy7VpTtIIEOlRNmVDz11SQrZlxFUHWgIYa0UcTEUDeLpP4h9IW7KtnxJKBo/xu1JLRq4tY6fw==}
     peerDependencies:
-      '@tsparticles/engine': 4.5.2
+      '@tsparticles/engine': 4.5.3
 
-  '@tsparticles/updater-opacity@4.5.2':
-    resolution: {integrity: sha512-/mJkwVoFZZl4TtkPmAhdZYuiSjaegJ4zs5l7YJdwKPnN7/6xmvJwrQhj9UGQHwusyUBZ5/V+6cXQFEG7Em154Q==}
+  '@tsparticles/updater-opacity@4.5.3':
+    resolution: {integrity: sha512-VaWHjSacuvcDpUPKriQMeG4xzNTKRuK7tZJL0toDQdB4uei2LX5qUBUqTrI0oBWW5Rk0QdUZR83LkhCLVJWtew==}
     peerDependencies:
-      '@tsparticles/engine': 4.5.2
+      '@tsparticles/engine': 4.5.3
 
-  '@tsparticles/updater-out-modes@4.5.2':
-    resolution: {integrity: sha512-vpSXG73F0lFMsb1uwgut7SiuFNF0Hk5QRD7i8DJO5oyyTrSkrHUjQHFFL7ONb+zmPzLC1J8SlfHXkldJZlpKww==}
+  '@tsparticles/updater-out-modes@4.5.3':
+    resolution: {integrity: sha512-gx9cV9LutgY0f25AQtFqW285jGCsHpAxYKbmoN4MOUEYOVX9WiDfrf59Ta9c/SelLvOanVsu5V1hVzBsJyX37w==}
     peerDependencies:
-      '@tsparticles/engine': 4.5.2
+      '@tsparticles/engine': 4.5.3
 
-  '@tsparticles/updater-paint@4.5.2':
-    resolution: {integrity: sha512-6EXelSVOv0LQrAretlDMIxMV/e1+GfJftBfPsHuCTPrTbmcoEIHQRC9VsGQDS/k4ija6oA2GTqTvoni8Ztbk8A==}
+  '@tsparticles/updater-paint@4.5.3':
+    resolution: {integrity: sha512-I+tPJgq7M5Qcu4pX97J1Hfo0s+bnCmj32IiZ3AJTFFA/+xScaL0SF7T7tW5YtXR45ZwYjaSdnmQ80CwrLxJjdQ==}
     peerDependencies:
-      '@tsparticles/engine': 4.5.2
+      '@tsparticles/engine': 4.5.3
 
-  '@tsparticles/updater-size@4.5.2':
-    resolution: {integrity: sha512-XwcyTnRssZ+ssuL500ojFaMdR5w+eb9XVs7MHd2G8q3A5N5a2UAKIhExiTEbWyAGXSgfHo/LQxUTX2Lq1cxSRg==}
+  '@tsparticles/updater-size@4.5.3':
+    resolution: {integrity: sha512-hh62wuc4HZ+BydUC62bA74hgr+qV888iWm23V222d6rqIkOpYzi5tcoPAh48Mgjl2gMSigTE6sySJez7reffNQ==}
     peerDependencies:
-      '@tsparticles/engine': 4.5.2
+      '@tsparticles/engine': 4.5.3
 
   '@tufjs/canonical-json@2.0.0':
     resolution: {integrity: sha512-yVtV8zsdo8qFHe+/3kw81dSLyF7D576A5cCFCi4X7B39tWT7SekaEFUnvnWJHz+9qO7qJTah1JbrDjWKqFtdWA==}
@@ -3851,8 +3818,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@versatiles/style@8.1.1':
-    resolution: {integrity: sha512-wotbl1VYI0JK94oq7Ji/QTdUi4jHoXtWpBnia/tcFBvAM8Ho4URnRjkNdJ6VbMM/3PqoFEYhUispAhsdCvv5hA==}
+  '@versatiles/style@9.0.0':
+    resolution: {integrity: sha512-hKtVfdQvxLYX7BaGKQhgtcnOHtj+dc1qU7hXL3V4KzMWU+RZtmGI83m5JPxGIB5M/UoDKc3cyXZaf2OeiL5jCA==}
     engines: {node: '>=20'}
     peerDependencies:
       maplibre-gl: '>=5.5.0'
@@ -3930,8 +3897,8 @@ packages:
   '@vscode/web-custom-data@0.4.13':
     resolution: {integrity: sha512-2ZUIRfhofZ/npLlf872EBnPmn27Kt4M2UssmQIfnJvgGgMYZJ5fvtHEDnttBBf2hnVtBgNCqZMVHJA+wsFVqTA==}
 
-  '@vvo/tzdb@6.202.0':
-    resolution: {integrity: sha512-MGsedU65ypk/Y7yrp+oOLBzhQj/124xvyoUzx7csPiBSf1b3lgTp5imatuWU4SF6s1Ue3I6GxC+GxE8R5O1l0w==}
+  '@vvo/tzdb@6.204.0':
+    resolution: {integrity: sha512-GC7i3D4rCs6l5jnf6NofoRRumZwVHS1cBNhgbenDLLyJNqJOrTo/8zrWovIrJl5BujiFurqn0Ayj10wysmOKrQ==}
 
   '@web/config-loader@0.1.3':
     resolution: {integrity: sha512-XVKH79pk4d3EHRhofete8eAnqto1e8mCRAqPV00KLNFzCWSe8sWmLnqKCqkPNARC6nksMaGrATnA5sPDRllMpQ==}
@@ -4115,9 +4082,6 @@ packages:
   anymatch@3.1.3:
     resolution: {integrity: sha512-KMReFUr0B4t+D+OBkjR3KYqvocp2XaSzO55UcB6mgQMd3KbcE+mWTyvVV7D/zsdEbNnV6acZUutkiHQXvTr1Rw==}
     engines: {node: '>= 8'}
-
-  arch@2.2.0:
-    resolution: {integrity: sha512-Of/R0wqp83cgHozfIYLbBMnej79U/SVGOOyuB3VVFv1NRM/PSFMK12x9KVtiYzJqmnU5WR2qp0Z5rHb7sWGnFQ==}
 
   arg@5.0.2:
     resolution: {integrity: sha512-PYjyFOLKQ9y57JvQ6QLo8dAgNqswh8M1RMJYdQduT6xbWSgK36P/Z/v+p888pM69jMMfS8Xd8F6I1kQ/I9HUGg==}
@@ -4466,6 +4430,9 @@ packages:
     resolution: {integrity: sha512-+IxzY9BZOQd/XuYPRmrvEVjF/nqj5kgT4kEq7VofrDoM1MxoRjEWkrCC3EtLi59TVawxTAn+orJwFQcrqEN1+g==}
     engines: {node: '>=18'}
 
+  cjs-module-lexer@2.3.0:
+    resolution: {integrity: sha512-lmNyBzi6iYiqyrExTctfmjd8tInx+dHu9PBomTfH5RXS53c27JMFJgzNv5TyAnm3PgGf+MLy0+Ws41/HlVxdKQ==}
+
   clean-css@5.3.3:
     resolution: {integrity: sha512-D5J+kHaVb/wKSFcyyV75uCn8fiY4sV38XJoe4CUyGQ+mOU/fMVYUdH1hJC+CJQ5uY3EnW27SbJYS4X8BiLrAFg==}
     engines: {node: '>= 10.0'}
@@ -4485,10 +4452,6 @@ packages:
   cli-spinners@3.4.0:
     resolution: {integrity: sha512-bXfOC4QcT1tKXGorxL3wbJm6XJPDqEnij2gQ2m7ESQuE+/z9YFIWnl/5RpTiKWbMq3EVKR4fRLJGn6DVfu0mpw==}
     engines: {node: '>=18.20'}
-
-  clipboardy@3.0.0:
-    resolution: {integrity: sha512-Su+uU5sr1jkUy1sGRpLKjKrvEOVXgSgiSInwa/qeID6aJ07yh+5NWc3h2QfjHjBnfX4LhtFcuAWKUsJ3r+fjbg==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
   cliui@6.0.0:
     resolution: {integrity: sha512-t6wbgtoCXvAzst7QgXxJYqPt0usEfbgQdftEPbLL/cvv6HPE5VgvqCuAIDR0NgU52ds6rFwqrgakNLrHEjCbrQ==}
@@ -4646,8 +4609,8 @@ packages:
   crelt@1.0.7:
     resolution: {integrity: sha512-aK6BbWfhf4U/wCcLHKPJl/xa6VkVstRaPywWtMKGwuOLc/wZTyQYuoxgvZnNsBvv7Kg3YTBQYYBCggcviQczuA==}
 
-  cropperjs@1.7.0:
-    resolution: {integrity: sha512-AkGnZxr7xAJBa63ObXq5ZKLkh9c8wisC+Ym8VzIDn3KZ+6qRTbBnOl2w2dFOTMzLP5IcfOpEK9PICDywNXhncg==}
+  cropperjs@2.3.1:
+    resolution: {integrity: sha512-bgy+iHRFjsBxBCriXkTuFuHRJGSGZISuqDGhDQG7gLK0F7qOzhH06bdXzGf4b0bZSQ+mApakybiW9xvKnS9dbg==}
 
   cross-spawn@7.0.6:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
@@ -4975,6 +4938,9 @@ packages:
   es-module-lexer@2.3.2:
     resolution: {integrity: sha512-poHGpORABojJJucnV9KbOavETW8lBVnphkW77ER5/BQ5Fz7oXSoCNek7IH3vR5nRjdsEz926ibFYX8KtLQmdyw==}
 
+  es-module-lexer@3.0.4:
+    resolution: {integrity: sha512-BldNY5mwkVu+cQ5Ymn3e6hB9Sx8XHx4ZevWbiUyZbfKxJxYO27Hf0wfzkxIaD5CAJMaGl3YspKELj0ff/7nCMA==}
+
   es-object-atoms@1.1.2:
     resolution: {integrity: sha512-HWcBoN6NileqtSydK2FqHbS/LoDd2pqrnQHLyJzBj4kOp/ky2MWMN694xOfkK8/SnUsW2DH7EfyVlydKCsm1Zw==}
     engines: {node: '>= 0.4'}
@@ -5028,8 +4994,8 @@ packages:
       eslint-plugin-import: '>=1.4.0'
       webpack: '>=1.11.0'
 
-  eslint-plugin-import-x@4.17.1:
-    resolution: {integrity: sha512-4cdstYkKCyjumM2Q9NSI03K8D2a9F4Ssz33K2lv2hQa4KmR9jPLwk3uWGtNvclfqBrPGfGuMBwsGMbe6dMRbfg==}
+  eslint-plugin-import-x@4.18.0:
+    resolution: {integrity: sha512-UfxHFmV+f9vwybrNn6LQ1rPzfeDMPGi/dRbqQnCFO/jBzYrujSOyX7jxqBSYr/HwXs/V4XJdEGPvC3Re46nzKg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       '@typescript-eslint/utils': ^8.56.0
@@ -5132,10 +5098,6 @@ packages:
   events@3.3.0:
     resolution: {integrity: sha512-mQw+2fkQbALzQ7V0MY0IqdnXNOeTtP4r0lN9z7AAawCXgqea7bDii20AYrIBrFd/Hx0M2Ocz6S111CaFkUcb0Q==}
     engines: {node: '>=0.8.x'}
-
-  execa@5.1.1:
-    resolution: {integrity: sha512-8uSpZZocAZRBAPIEINJj3Lo9HyGitllczc27Eh5YYojjMFMn8yHMDMaUHE2Jqfq05D/wucwI4JGURyXt1vchyg==}
-    engines: {node: '>=10'}
 
   exif-parser@0.1.12:
     resolution: {integrity: sha512-c2bQfLNbMzLPmzQuOr8fy0csy84WmwnER81W88DzTp9CYNPJ6yzOj2EZAh9pywYpqHnshVLHQJ8WzldAyfY+Iw==}
@@ -5354,10 +5316,6 @@ packages:
     resolution: {integrity: sha512-sTSfBjoXBp89JvIKIefqw7U2CCebsc74kiY6awiGogKtoSGbgjYE/G/+l9sF3MWFPNc9IcoOC4ODfKHfxFmp0g==}
     engines: {node: '>= 0.4'}
 
-  get-stream@6.0.1:
-    resolution: {integrity: sha512-ts6Wi+2j3jQjqi70w5AlN8DFnkSwC+MqmxEzdEALB2qXZYV3X/b1CTfgPLGJNMeAWxdPfU8FO1ms3NUfaHCPYg==}
-    engines: {node: '>=10'}
-
   get-symbol-description@1.1.0:
     resolution: {integrity: sha512-w9UMqWwJxHNOvoNzSJ2oPF5wvYcvP7jUvYzhp67yEhTi17ZDBBC1z9pTdGuzjD+EFIqLSYRweZjqfiPzQ06Ebg==}
     engines: {node: '>= 0.4'}
@@ -5564,10 +5522,6 @@ packages:
     resolution: {integrity: sha512-ag87y7cJJ9/3+GxFr8Oy4O5faDsGRGnBGsJj/YjOSsSx/5eadKLYTMPlzuR6obgoCDDm0abAAZitXXQkMOPSpA==}
     engines: {node: '>= 20'}
 
-  human-signals@2.1.0:
-    resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
-    engines: {node: '>=10.17.0'}
-
   husky@9.1.7:
     resolution: {integrity: sha512-5gs5ytaNjBrh5Ow3zrvdUUY+0VxIuWVL4i9irt6friV+BqdCfmV11CQTWMiBYWHbXhco+J1kHfTOUkePhCDvMA==}
     engines: {node: '>=18'}
@@ -5703,11 +5657,6 @@ packages:
 
   is-decimal@2.0.1:
     resolution: {integrity: sha512-AAB9hiomQs5DXWcRB1rqsxGUstbRroFOPPVAomNk/3XHR5JyEZChOyTWe2oayKnsSsr/kcGqF+z6yuH6HHpN0A==}
-
-  is-docker@2.2.1:
-    resolution: {integrity: sha512-F+i2BKsFrH66iaUFc0woD8sLy8getkwTwtOBjvs56Cx4CgJDeKQeqfz8wAYiSb8JOprWhHH5p77PbmYCvvUuXQ==}
-    engines: {node: '>=8'}
-    hasBin: true
 
   is-document.all@1.0.0:
     resolution: {integrity: sha512-+XSoyS05OdBbhFuELhgTCpFNHkpBOJqtsZfUFFpe5QTw+9Sjbh8zitxhQkYAo6wV7e1Vb8cAPvpCk9jGam/82g==}
@@ -5857,10 +5806,6 @@ packages:
   is-windows@1.0.2:
     resolution: {integrity: sha512-eXK1UInq2bPmjyX6e3VHIzMLobc4J94i4AWn+Hpq3OU5KkrRC96OAcR3PRJ/pGu6m8TRnBHP9dkXQVsT/COVIA==}
     engines: {node: '>=0.10.0'}
-
-  is-wsl@2.2.0:
-    resolution: {integrity: sha512-fKzAra0rGJUUBwGBgNkHZuToZcn+TtXHpeCgmkMJMMYx1sQDYaCSyjJBSCa2nH1DGm7s3n1oBnohoVTBaN7Lww==}
-    engines: {node: '>=8'}
 
   isarray@1.0.0:
     resolution: {integrity: sha512-VLghIWNM6ELQzo7zwmcg0NmTVyWKYjvIeM83yjp0wRDTmUnrM678fQbcKBo6n2CJEF0szoG//ytg+TKla89ALQ==}
@@ -6204,8 +6149,8 @@ packages:
   map-stream@0.0.7:
     resolution: {integrity: sha512-C0X0KQmGm3N2ftbTGBhSyuydQ+vV1LC3f3zPvT3RXHXNZrvfPZcoXp/N5DOa8vedX/rTMm2CjTtivFg2STJMRQ==}
 
-  maplibre-gl@6.16.0:
-    resolution: {integrity: sha512-gApO66EMtoDZuio680RUBvskR7ahFd/NNhLN4tBAs+Y7FeT4gQV8zVFgYVMRmFxQznOEzecW19w6xOd9XjZjiA==}
+  maplibre-gl@6.17.0:
+    resolution: {integrity: sha512-2chIZwpLGenoUQOcnm9Pk4SLbA8ppNFq8jlpXiq9vcYm3Y1wJ3fc82FL0GLwBaPYJCLzPv/mC46KEupVov75rQ==}
     engines: {node: '>=16.14.0', npm: '>=8.1.0'}
 
   marked@11.2.0:
@@ -6500,10 +6445,6 @@ packages:
   npm-registry-fetch@20.0.1:
     resolution: {integrity: sha512-vzc1svxw/kw1IRjFsLi6gaxe1Olqm88V0tIfu2u5raL0b1gChe6ZEXNkyUlKxUC7s/egt5NxZHkbY18tMKKLfQ==}
     engines: {node: ^22.22.2 || ^24.15.0 || >=26.0.0}
-
-  npm-run-path@4.0.1:
-    resolution: {integrity: sha512-S48WzZW777zhNIrn7gxOlISNAqi9ZC/uQFnRdbeIHhZhCA6UqpkOT8T1G7BvfdgP4Er8gF4sUbaS0i7QvIfCWw==}
-    engines: {node: '>=8'}
 
   nth-check@2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
@@ -7106,8 +7047,8 @@ packages:
   serve-handler@6.1.7:
     resolution: {integrity: sha512-CinAq1xWb0vR3twAv9evEU8cNWkXCb9kd5ePAHUKJBkOsUpR1wt/CvGdeca7vqumL1U5cSaeVQ6zZMxiJ3yWsg==}
 
-  serve@14.2.6:
-    resolution: {integrity: sha512-QEjUSA+sD4Rotm1znR8s50YqA3kYpRGPmtd5GlFxbaL9n/FdUNbqMhxClqdditSk0LlZyA/dhud6XNRTOC9x2Q==}
+  serve@14.2.7:
+    resolution: {integrity: sha512-mTJ9LAyBwHhO2T/PNaI0oWxmKl7FFuJ+ZEHKL1rRO69fWV1Y4qcsFB3gpuD2HfHvJCwvJq5ChibjjAGe0wc0vw==}
     engines: {node: '>= 14'}
     hasBin: true
 
@@ -7361,10 +7302,6 @@ packages:
     resolution: {integrity: sha512-ZprKx+bBLXv067WTCALv8SSz5l2+XhpYCsVtSqlMnkAXMWDq+/ekVbl1ghqP9rUHTzv6sm/DwCOiYutU/yp1fw==}
     engines: {node: '>=10'}
 
-  strip-final-newline@2.0.0:
-    resolution: {integrity: sha512-BrpvfNAE3dcvq7ll3xVumzjKjZQ5tI1sEUIKr3Uoks0XUl45St3FlatVqef9prk4jRDzhW6WZg+3bk93y6pLjA==}
-    engines: {node: '>=6'}
-
   strip-json-comments@2.0.1:
     resolution: {integrity: sha512-4gB8na07fecVVkOI6Rs4e7T6NOTki5EmL7TUduTs6bu3EdnSycntVJ4re8kgZA+wx9IueI2Y11bfbgwtzuE0KQ==}
     engines: {node: '>=0.10.0'}
@@ -7504,6 +7441,10 @@ packages:
   tinybench@6.2.2:
     resolution: {integrity: sha512-nIZ2N2dFpjBsg2hgitKu7mA+FvsIJuGJOwysRngmVRRmWgR/UyPjwJj8c/fT/dhm8EkHnF5EOogRf+0Z2qrimA==}
     engines: {node: '>=20.0.0'}
+
+  tinyclip@0.1.15:
+    resolution: {integrity: sha512-uo33abH+Ays0xYaDysoBt494Hb3hsEczMpcC0MwFl773pazORx4fmvKhclhR1wonUbB6vvpRsvVMwnhfqeMc+A==}
+    engines: {node: ^16.14.0 || >= 17.3.0}
 
   tinycolor2@1.6.0:
     resolution: {integrity: sha512-XPaBkWQJdsf3pLKJV9p4qN/S+fm2Oj8AIPo1BTUhg5oxkvm9+SVEGFdhyOz7tTdUTfvxMiAs4sp6/eZO2Ew+pw==}
@@ -9623,6 +9564,72 @@ snapshots:
     dependencies:
       commander: 15.0.0
 
+  '@cropper/element-canvas@2.3.1':
+    dependencies:
+      '@cropper/element': 2.3.1
+      '@cropper/utils': 2.3.1
+
+  '@cropper/element-crosshair@2.3.1':
+    dependencies:
+      '@cropper/element': 2.3.1
+      '@cropper/utils': 2.3.1
+
+  '@cropper/element-grid@2.3.1':
+    dependencies:
+      '@cropper/element': 2.3.1
+      '@cropper/utils': 2.3.1
+
+  '@cropper/element-handle@2.3.1':
+    dependencies:
+      '@cropper/element': 2.3.1
+      '@cropper/utils': 2.3.1
+
+  '@cropper/element-image@2.3.1':
+    dependencies:
+      '@cropper/element': 2.3.1
+      '@cropper/element-canvas': 2.3.1
+      '@cropper/utils': 2.3.1
+
+  '@cropper/element-selection@2.3.1':
+    dependencies:
+      '@cropper/element': 2.3.1
+      '@cropper/element-canvas': 2.3.1
+      '@cropper/element-image': 2.3.1
+      '@cropper/utils': 2.3.1
+
+  '@cropper/element-shade@2.3.1':
+    dependencies:
+      '@cropper/element': 2.3.1
+      '@cropper/element-canvas': 2.3.1
+      '@cropper/element-selection': 2.3.1
+      '@cropper/utils': 2.3.1
+
+  '@cropper/element-viewer@2.3.1':
+    dependencies:
+      '@cropper/element': 2.3.1
+      '@cropper/element-canvas': 2.3.1
+      '@cropper/element-image': 2.3.1
+      '@cropper/element-selection': 2.3.1
+      '@cropper/utils': 2.3.1
+
+  '@cropper/element@2.3.1':
+    dependencies:
+      '@cropper/utils': 2.3.1
+
+  '@cropper/elements@2.3.1':
+    dependencies:
+      '@cropper/element': 2.3.1
+      '@cropper/element-canvas': 2.3.1
+      '@cropper/element-crosshair': 2.3.1
+      '@cropper/element-grid': 2.3.1
+      '@cropper/element-handle': 2.3.1
+      '@cropper/element-image': 2.3.1
+      '@cropper/element-selection': 2.3.1
+      '@cropper/element-shade': 2.3.1
+      '@cropper/element-viewer': 2.3.1
+
+  '@cropper/utils@2.3.1': {}
+
   '@ctrl/tinycolor@4.1.0': {}
 
   '@custom-elements-manifest/analyzer@0.11.0':
@@ -9889,40 +9896,40 @@ snapshots:
       - '@types/node'
       - '@types/react'
 
-  '@html-eslint/core@0.67.0':
+  '@html-eslint/core@0.68.0':
     dependencies:
-      '@html-eslint/types': 0.67.0
+      '@html-eslint/types': 0.68.0
       html-standard: 0.0.13
 
-  '@html-eslint/eslint-plugin@0.67.0(eslint@10.14.0(supports-color@8.1.1))':
+  '@html-eslint/eslint-plugin@0.68.0(eslint@10.14.0(supports-color@8.1.1))':
     dependencies:
       '@eslint/plugin-kit': 0.4.1
-      '@html-eslint/core': 0.67.0
-      '@html-eslint/parser': 0.67.0
-      '@html-eslint/template-parser': 0.67.0
-      '@html-eslint/template-syntax-parser': 0.67.0
-      '@html-eslint/types': 0.67.0
+      '@html-eslint/core': 0.68.0
+      '@html-eslint/parser': 0.68.0
+      '@html-eslint/template-parser': 0.68.0
+      '@html-eslint/template-syntax-parser': 0.68.0
+      '@html-eslint/types': 0.68.0
       '@rviscomi/capo.js': 2.2.1
       eslint: 10.14.0(supports-color@8.1.1)
       html-standard: 0.0.13
 
-  '@html-eslint/parser@0.67.0':
+  '@html-eslint/parser@0.68.0':
     dependencies:
-      '@html-eslint/template-syntax-parser': 0.67.0
-      '@html-eslint/types': 0.67.0
+      '@html-eslint/template-syntax-parser': 0.68.0
+      '@html-eslint/types': 0.68.0
       css-tree: 3.2.1
       es-html-parser: 0.3.2
 
-  '@html-eslint/template-parser@0.67.0':
+  '@html-eslint/template-parser@0.68.0':
     dependencies:
-      '@html-eslint/types': 0.67.0
+      '@html-eslint/types': 0.68.0
       es-html-parser: 0.3.2
 
-  '@html-eslint/template-syntax-parser@0.67.0':
+  '@html-eslint/template-syntax-parser@0.68.0':
     dependencies:
-      '@html-eslint/types': 0.67.0
+      '@html-eslint/types': 0.68.0
 
-  '@html-eslint/types@0.67.0':
+  '@html-eslint/types@0.68.0':
     dependencies:
       '@types/css-tree': 2.3.11
       '@types/estree': 1.0.9
@@ -10172,11 +10179,11 @@ snapshots:
     dependencies:
       kdbush: 4.1.0
 
-  '@maplibre/maplibre-gl-leaflet@0.1.4(@types/leaflet@1.9.22)(leaflet@1.9.4)(maplibre-gl@6.16.0)':
+  '@maplibre/maplibre-gl-leaflet@0.1.4(@types/leaflet@1.9.22)(leaflet@1.9.4)(maplibre-gl@6.17.0)':
     dependencies:
       '@types/leaflet': 1.9.22
       leaflet: 1.9.4
-      maplibre-gl: 6.16.0
+      maplibre-gl: 6.17.0
 
   '@maplibre/maplibre-gl-style-spec@26.5.1':
     dependencies:
@@ -10198,141 +10205,6 @@ snapshots:
       pbf: 5.1.2
 
   '@marijn/find-cluster-break@1.0.3': {}
-
-  '@material/animation@14.0.0-canary.53b3cad2f.0':
-    dependencies:
-      tslib: 2.9.1
-
-  '@material/base@14.0.0-canary.53b3cad2f.0':
-    dependencies:
-      tslib: 2.9.1
-
-  '@material/density@14.0.0-canary.53b3cad2f.0':
-    dependencies:
-      tslib: 2.9.1
-
-  '@material/dom@14.0.0-canary.53b3cad2f.0':
-    dependencies:
-      '@material/feature-targeting': 14.0.0-canary.53b3cad2f.0
-      tslib: 2.9.1
-
-  '@material/feature-targeting@14.0.0-canary.53b3cad2f.0':
-    dependencies:
-      tslib: 2.9.1
-
-  '@material/focus-ring@14.0.0-canary.53b3cad2f.0':
-    dependencies:
-      '@material/dom': 14.0.0-canary.53b3cad2f.0
-      '@material/feature-targeting': 14.0.0-canary.53b3cad2f.0
-      '@material/rtl': 14.0.0-canary.53b3cad2f.0
-
-  '@material/list@14.0.0-canary.53b3cad2f.0':
-    dependencies:
-      '@material/base': 14.0.0-canary.53b3cad2f.0
-      '@material/density': 14.0.0-canary.53b3cad2f.0
-      '@material/dom': 14.0.0-canary.53b3cad2f.0
-      '@material/feature-targeting': 14.0.0-canary.53b3cad2f.0
-      '@material/ripple': 14.0.0-canary.53b3cad2f.0
-      '@material/rtl': 14.0.0-canary.53b3cad2f.0
-      '@material/shape': 14.0.0-canary.53b3cad2f.0
-      '@material/theme': 14.0.0-canary.53b3cad2f.0
-      '@material/typography': 14.0.0-canary.53b3cad2f.0
-      tslib: 2.9.1
-
-  '@material/mwc-base@0.27.0':
-    dependencies:
-      '@material/base': 14.0.0-canary.53b3cad2f.0
-      '@material/dom': 14.0.0-canary.53b3cad2f.0
-      lit: 3.3.3
-      tslib: 2.9.1
-
-  '@material/mwc-checkbox@0.27.0':
-    dependencies:
-      '@material/mwc-base': 0.27.0
-      '@material/mwc-ripple': 0.27.0
-      lit: 3.3.3
-      tslib: 2.9.1
-
-  '@material/mwc-list@0.27.0(patch_hash=9450e509a86887d8f68ca9cf3f81e6ed70e94e49de13c5f6f20f94519ad4a987)':
-    dependencies:
-      '@material/base': 14.0.0-canary.53b3cad2f.0
-      '@material/dom': 14.0.0-canary.53b3cad2f.0
-      '@material/list': 14.0.0-canary.53b3cad2f.0
-      '@material/mwc-base': 0.27.0
-      '@material/mwc-checkbox': 0.27.0
-      '@material/mwc-radio': 0.27.0
-      '@material/mwc-ripple': 0.27.0
-      lit: 3.3.3
-      tslib: 2.9.1
-
-  '@material/mwc-radio@0.27.0':
-    dependencies:
-      '@material/mwc-base': 0.27.0
-      '@material/mwc-ripple': 0.27.0
-      '@material/radio': 14.0.0-canary.53b3cad2f.0
-      lit: 3.3.3
-      tslib: 2.9.1
-
-  '@material/mwc-ripple@0.27.0':
-    dependencies:
-      '@material/dom': 14.0.0-canary.53b3cad2f.0
-      '@material/mwc-base': 0.27.0
-      '@material/ripple': 14.0.0-canary.53b3cad2f.0
-      lit: 3.3.3
-      tslib: 2.9.1
-
-  '@material/radio@14.0.0-canary.53b3cad2f.0':
-    dependencies:
-      '@material/animation': 14.0.0-canary.53b3cad2f.0
-      '@material/base': 14.0.0-canary.53b3cad2f.0
-      '@material/density': 14.0.0-canary.53b3cad2f.0
-      '@material/dom': 14.0.0-canary.53b3cad2f.0
-      '@material/feature-targeting': 14.0.0-canary.53b3cad2f.0
-      '@material/focus-ring': 14.0.0-canary.53b3cad2f.0
-      '@material/ripple': 14.0.0-canary.53b3cad2f.0
-      '@material/theme': 14.0.0-canary.53b3cad2f.0
-      '@material/touch-target': 14.0.0-canary.53b3cad2f.0
-      tslib: 2.9.1
-
-  '@material/ripple@14.0.0-canary.53b3cad2f.0':
-    dependencies:
-      '@material/animation': 14.0.0-canary.53b3cad2f.0
-      '@material/base': 14.0.0-canary.53b3cad2f.0
-      '@material/dom': 14.0.0-canary.53b3cad2f.0
-      '@material/feature-targeting': 14.0.0-canary.53b3cad2f.0
-      '@material/rtl': 14.0.0-canary.53b3cad2f.0
-      '@material/theme': 14.0.0-canary.53b3cad2f.0
-      tslib: 2.9.1
-
-  '@material/rtl@14.0.0-canary.53b3cad2f.0':
-    dependencies:
-      '@material/theme': 14.0.0-canary.53b3cad2f.0
-      tslib: 2.9.1
-
-  '@material/shape@14.0.0-canary.53b3cad2f.0':
-    dependencies:
-      '@material/feature-targeting': 14.0.0-canary.53b3cad2f.0
-      '@material/rtl': 14.0.0-canary.53b3cad2f.0
-      '@material/theme': 14.0.0-canary.53b3cad2f.0
-      tslib: 2.9.1
-
-  '@material/theme@14.0.0-canary.53b3cad2f.0':
-    dependencies:
-      '@material/feature-targeting': 14.0.0-canary.53b3cad2f.0
-      tslib: 2.9.1
-
-  '@material/touch-target@14.0.0-canary.53b3cad2f.0':
-    dependencies:
-      '@material/base': 14.0.0-canary.53b3cad2f.0
-      '@material/feature-targeting': 14.0.0-canary.53b3cad2f.0
-      '@material/rtl': 14.0.0-canary.53b3cad2f.0
-      tslib: 2.9.1
-
-  '@material/typography@14.0.0-canary.53b3cad2f.0':
-    dependencies:
-      '@material/feature-targeting': 14.0.0-canary.53b3cad2f.0
-      '@material/theme': 14.0.0-canary.53b3cad2f.0
-      tslib: 2.9.1
 
   '@mdi/js@7.4.47': {}
 
@@ -11319,88 +11191,88 @@ snapshots:
       magic-string: 0.30.21
       string.prototype.matchall: 4.0.12
 
-  '@tsparticles/animation-utils@4.5.2(@tsparticles/engine@4.5.2)':
+  '@tsparticles/animation-utils@4.5.3(@tsparticles/engine@4.5.3)':
     dependencies:
-      '@tsparticles/engine': 4.5.2
+      '@tsparticles/engine': 4.5.3
 
-  '@tsparticles/basic@4.5.2':
+  '@tsparticles/basic@4.5.3':
     dependencies:
-      '@tsparticles/engine': 4.5.2
-      '@tsparticles/plugin-blend': 4.5.2(@tsparticles/engine@4.5.2)
-      '@tsparticles/plugin-hex-color': 4.5.2(@tsparticles/engine@4.5.2)
-      '@tsparticles/plugin-hsl-color': 4.5.2(@tsparticles/engine@4.5.2)
-      '@tsparticles/plugin-move': 4.5.2(@tsparticles/engine@4.5.2)
-      '@tsparticles/plugin-rgb-color': 4.5.2(@tsparticles/engine@4.5.2)
-      '@tsparticles/shape-circle': 4.5.2(@tsparticles/engine@4.5.2)
-      '@tsparticles/updater-opacity': 4.5.2(@tsparticles/engine@4.5.2)
-      '@tsparticles/updater-out-modes': 4.5.2(@tsparticles/engine@4.5.2)
-      '@tsparticles/updater-paint': 4.5.2(@tsparticles/engine@4.5.2)
-      '@tsparticles/updater-size': 4.5.2(@tsparticles/engine@4.5.2)
+      '@tsparticles/engine': 4.5.3
+      '@tsparticles/plugin-blend': 4.5.3(@tsparticles/engine@4.5.3)
+      '@tsparticles/plugin-hex-color': 4.5.3(@tsparticles/engine@4.5.3)
+      '@tsparticles/plugin-hsl-color': 4.5.3(@tsparticles/engine@4.5.3)
+      '@tsparticles/plugin-move': 4.5.3(@tsparticles/engine@4.5.3)
+      '@tsparticles/plugin-rgb-color': 4.5.3(@tsparticles/engine@4.5.3)
+      '@tsparticles/shape-circle': 4.5.3(@tsparticles/engine@4.5.3)
+      '@tsparticles/updater-opacity': 4.5.3(@tsparticles/engine@4.5.3)
+      '@tsparticles/updater-out-modes': 4.5.3(@tsparticles/engine@4.5.3)
+      '@tsparticles/updater-paint': 4.5.3(@tsparticles/engine@4.5.3)
+      '@tsparticles/updater-size': 4.5.3(@tsparticles/engine@4.5.3)
 
-  '@tsparticles/canvas-utils@4.5.2(@tsparticles/engine@4.5.2)':
+  '@tsparticles/canvas-utils@4.5.3(@tsparticles/engine@4.5.3)':
     dependencies:
-      '@tsparticles/engine': 4.5.2
+      '@tsparticles/engine': 4.5.3
 
-  '@tsparticles/engine@4.5.2': {}
+  '@tsparticles/engine@4.5.3': {}
 
-  '@tsparticles/interaction-particles-links@4.5.2(@tsparticles/engine@4.5.2)(@tsparticles/plugin-interactivity@4.5.2(@tsparticles/engine@4.5.2))':
+  '@tsparticles/interaction-particles-links@4.5.3(@tsparticles/engine@4.5.3)(@tsparticles/plugin-interactivity@4.5.3(@tsparticles/engine@4.5.3))':
     dependencies:
-      '@tsparticles/canvas-utils': 4.5.2(@tsparticles/engine@4.5.2)
-      '@tsparticles/engine': 4.5.2
-      '@tsparticles/plugin-interactivity': 4.5.2(@tsparticles/engine@4.5.2)
+      '@tsparticles/canvas-utils': 4.5.3(@tsparticles/engine@4.5.3)
+      '@tsparticles/engine': 4.5.3
+      '@tsparticles/plugin-interactivity': 4.5.3(@tsparticles/engine@4.5.3)
 
-  '@tsparticles/plugin-blend@4.5.2(@tsparticles/engine@4.5.2)':
+  '@tsparticles/plugin-blend@4.5.3(@tsparticles/engine@4.5.3)':
     dependencies:
-      '@tsparticles/engine': 4.5.2
+      '@tsparticles/engine': 4.5.3
 
-  '@tsparticles/plugin-hex-color@4.5.2(@tsparticles/engine@4.5.2)':
+  '@tsparticles/plugin-hex-color@4.5.3(@tsparticles/engine@4.5.3)':
     dependencies:
-      '@tsparticles/engine': 4.5.2
+      '@tsparticles/engine': 4.5.3
 
-  '@tsparticles/plugin-hsl-color@4.5.2(@tsparticles/engine@4.5.2)':
+  '@tsparticles/plugin-hsl-color@4.5.3(@tsparticles/engine@4.5.3)':
     dependencies:
-      '@tsparticles/engine': 4.5.2
+      '@tsparticles/engine': 4.5.3
 
-  '@tsparticles/plugin-interactivity@4.5.2(@tsparticles/engine@4.5.2)':
+  '@tsparticles/plugin-interactivity@4.5.3(@tsparticles/engine@4.5.3)':
     dependencies:
-      '@tsparticles/engine': 4.5.2
+      '@tsparticles/engine': 4.5.3
 
-  '@tsparticles/plugin-move@4.5.2(@tsparticles/engine@4.5.2)':
+  '@tsparticles/plugin-move@4.5.3(@tsparticles/engine@4.5.3)':
     dependencies:
-      '@tsparticles/engine': 4.5.2
+      '@tsparticles/engine': 4.5.3
 
-  '@tsparticles/plugin-rgb-color@4.5.2(@tsparticles/engine@4.5.2)':
+  '@tsparticles/plugin-rgb-color@4.5.3(@tsparticles/engine@4.5.3)':
     dependencies:
-      '@tsparticles/engine': 4.5.2
+      '@tsparticles/engine': 4.5.3
 
-  '@tsparticles/preset-links@4.5.2':
+  '@tsparticles/preset-links@4.5.3':
     dependencies:
-      '@tsparticles/basic': 4.5.2
-      '@tsparticles/engine': 4.5.2
-      '@tsparticles/interaction-particles-links': 4.5.2(@tsparticles/engine@4.5.2)(@tsparticles/plugin-interactivity@4.5.2(@tsparticles/engine@4.5.2))
-      '@tsparticles/plugin-interactivity': 4.5.2(@tsparticles/engine@4.5.2)
+      '@tsparticles/basic': 4.5.3
+      '@tsparticles/engine': 4.5.3
+      '@tsparticles/interaction-particles-links': 4.5.3(@tsparticles/engine@4.5.3)(@tsparticles/plugin-interactivity@4.5.3(@tsparticles/engine@4.5.3))
+      '@tsparticles/plugin-interactivity': 4.5.3(@tsparticles/engine@4.5.3)
 
-  '@tsparticles/shape-circle@4.5.2(@tsparticles/engine@4.5.2)':
+  '@tsparticles/shape-circle@4.5.3(@tsparticles/engine@4.5.3)':
     dependencies:
-      '@tsparticles/engine': 4.5.2
+      '@tsparticles/engine': 4.5.3
 
-  '@tsparticles/updater-opacity@4.5.2(@tsparticles/engine@4.5.2)':
+  '@tsparticles/updater-opacity@4.5.3(@tsparticles/engine@4.5.3)':
     dependencies:
-      '@tsparticles/animation-utils': 4.5.2(@tsparticles/engine@4.5.2)
-      '@tsparticles/engine': 4.5.2
+      '@tsparticles/animation-utils': 4.5.3(@tsparticles/engine@4.5.3)
+      '@tsparticles/engine': 4.5.3
 
-  '@tsparticles/updater-out-modes@4.5.2(@tsparticles/engine@4.5.2)':
+  '@tsparticles/updater-out-modes@4.5.3(@tsparticles/engine@4.5.3)':
     dependencies:
-      '@tsparticles/engine': 4.5.2
+      '@tsparticles/engine': 4.5.3
 
-  '@tsparticles/updater-paint@4.5.2(@tsparticles/engine@4.5.2)':
+  '@tsparticles/updater-paint@4.5.3(@tsparticles/engine@4.5.3)':
     dependencies:
-      '@tsparticles/engine': 4.5.2
+      '@tsparticles/engine': 4.5.3
 
-  '@tsparticles/updater-size@4.5.2(@tsparticles/engine@4.5.2)':
+  '@tsparticles/updater-size@4.5.3(@tsparticles/engine@4.5.3)':
     dependencies:
-      '@tsparticles/animation-utils': 4.5.2(@tsparticles/engine@4.5.2)
-      '@tsparticles/engine': 4.5.2
+      '@tsparticles/animation-utils': 4.5.3(@tsparticles/engine@4.5.3)
+      '@tsparticles/engine': 4.5.3
 
   '@tufjs/canonical-json@2.0.0': {}
 
@@ -11754,11 +11626,11 @@ snapshots:
   '@unrs/resolver-binding-win32-x64-msvc@1.12.2':
     optional: true
 
-  '@versatiles/style@8.1.1(maplibre-gl@6.16.0)':
+  '@versatiles/style@9.0.0(maplibre-gl@6.17.0)':
     dependencies:
       '@maplibre/maplibre-gl-style-spec': 26.5.1
     optionalDependencies:
-      maplibre-gl: 6.16.0
+      maplibre-gl: 6.17.0
 
   '@vibrant/color@4.0.4': {}
 
@@ -11848,7 +11720,7 @@ snapshots:
 
   '@vscode/web-custom-data@0.4.13': {}
 
-  '@vvo/tzdb@6.202.0': {}
+  '@vvo/tzdb@6.204.0': {}
 
   '@web/config-loader@0.1.3':
     dependencies:
@@ -11986,8 +11858,6 @@ snapshots:
     dependencies:
       normalize-path: 3.0.0
       picomatch: 2.3.2
-
-  arch@2.2.0: {}
 
   arg@5.0.2: {}
 
@@ -12366,6 +12236,8 @@ snapshots:
 
   chownr@3.0.0: {}
 
+  cjs-module-lexer@2.3.0: {}
+
   clean-css@5.3.3:
     dependencies:
       source-map: 0.6.1
@@ -12379,12 +12251,6 @@ snapshots:
   cli-spinners@2.9.2: {}
 
   cli-spinners@3.4.0: {}
-
-  clipboardy@3.0.0:
-    dependencies:
-      arch: 2.2.0
-      execa: 5.1.1
-      is-wsl: 2.2.0
 
   cliui@6.0.0:
     dependencies:
@@ -12520,7 +12386,10 @@ snapshots:
 
   crelt@1.0.7: {}
 
-  cropperjs@1.7.0: {}
+  cropperjs@2.3.1:
+    dependencies:
+      '@cropper/elements': 2.3.1
+      '@cropper/utils': 2.3.1
 
   cross-spawn@7.0.6:
     dependencies:
@@ -12894,6 +12763,8 @@ snapshots:
 
   es-module-lexer@2.3.2: {}
 
+  es-module-lexer@3.0.4: {}
+
   es-object-atoms@1.1.2:
     dependencies:
       es-errors: 1.3.0
@@ -12952,15 +12823,17 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import-x@4.17.1(@typescript-eslint/utils@8.72.1(eslint@10.14.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(eslint@10.14.0(supports-color@8.1.1))(supports-color@8.1.1):
+  eslint-plugin-import-x@4.18.0(@typescript-eslint/utils@8.72.1(eslint@10.14.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(eslint@10.14.0(supports-color@8.1.1))(supports-color@8.1.1):
     dependencies:
       '@typescript-eslint/types': 8.72.1
+      cjs-module-lexer: 2.3.0
       comment-parser: 1.4.8
       debug: 4.4.3(supports-color@8.1.1)
+      es-module-lexer: 3.0.4
       eslint: 10.14.0(supports-color@8.1.1)
       eslint-import-context: 0.1.9(unrs-resolver@1.12.2)
       is-glob: 4.0.3
-      minimatch: 10.2.6
+      minimatch: 11.0.5
       semver: 7.8.5
       stable-hash-x: 0.2.0
       unrs-resolver: 1.12.2
@@ -13084,18 +12957,6 @@ snapshots:
       - bare-abort-controller
 
   events@3.3.0: {}
-
-  execa@5.1.1:
-    dependencies:
-      cross-spawn: 7.0.6
-      get-stream: 6.0.1
-      human-signals: 2.1.0
-      is-stream: 2.0.1
-      merge-stream: 2.0.0
-      npm-run-path: 4.0.1
-      onetime: 5.1.2
-      signal-exit: 3.0.7
-      strip-final-newline: 2.0.0
 
   exif-parser@0.1.12: {}
 
@@ -13345,8 +13206,6 @@ snapshots:
     dependencies:
       dunder-proto: 1.0.1
       es-object-atoms: 1.1.2
-
-  get-stream@6.0.1: {}
 
   get-symbol-description@1.1.0:
     dependencies:
@@ -13620,8 +13479,6 @@ snapshots:
       - kerberos
       - supports-color
 
-  human-signals@2.1.0: {}
-
   husky@9.1.7: {}
 
   iconv-lite@0.6.3:
@@ -13751,8 +13608,6 @@ snapshots:
 
   is-decimal@2.0.1: {}
 
-  is-docker@2.2.1: {}
-
   is-document.all@1.0.0:
     dependencies:
       call-bound: 1.0.4
@@ -13874,10 +13729,6 @@ snapshots:
       get-intrinsic: 1.3.1
 
   is-windows@1.0.2: {}
-
-  is-wsl@2.2.0:
-    dependencies:
-      is-docker: 2.2.1
 
   isarray@1.0.0: {}
 
@@ -14245,7 +14096,7 @@ snapshots:
 
   map-stream@0.0.7: {}
 
-  maplibre-gl@6.16.0:
+  maplibre-gl@6.17.0:
     dependencies:
       '@mapbox/point-geometry': 1.1.0
       '@mapbox/tiny-sdf': 2.3.0
@@ -14568,10 +14419,6 @@ snapshots:
     transitivePeerDependencies:
       - kerberos
       - supports-color
-
-  npm-run-path@4.0.1:
-    dependencies:
-      path-key: 3.1.1
 
   nth-check@2.1.1:
     dependencies:
@@ -15243,7 +15090,7 @@ snapshots:
       path-to-regexp: 3.3.0
       range-parser: 1.2.0
 
-  serve@14.2.6(supports-color@8.1.1):
+  serve@14.2.7(supports-color@8.1.1):
     dependencies:
       '@zeit/schemas': 2.36.0
       ajv: 8.18.0
@@ -15251,10 +15098,10 @@ snapshots:
       boxen: 7.0.0
       chalk: 5.0.1
       chalk-template: 0.4.0
-      clipboardy: 3.0.0
       compression: 1.8.1(supports-color@8.1.1)
       is-port-reachable: 4.0.0
       serve-handler: 6.1.7
+      tinyclip: 0.1.15
       update-check: 1.5.4
     transitivePeerDependencies:
       - supports-color
@@ -15598,8 +15445,6 @@ snapshots:
 
   strip-comments@2.0.1: {}
 
-  strip-final-newline@2.0.0: {}
-
   strip-json-comments@2.0.1: {}
 
   strtok3@6.3.0:
@@ -15714,6 +15559,8 @@ snapshots:
   timm@1.7.1: {}
 
   tinybench@6.2.2: {}
+
+  tinyclip@0.1.15: {}
 
   tinycolor2@1.6.0: {}
 
