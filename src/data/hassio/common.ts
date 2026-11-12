@@ -16,6 +16,11 @@ export interface HassioStats {
   cpu_percent: number | null;
   cpu_system_usage: number;
   cpu_usage: number;
+  // Usage of the GPUs of the container, null if it uses no GPU
+  gpu_memory_limit?: number | null;
+  gpu_memory_percent?: number | null;
+  gpu_memory_usage?: number | null;
+  gpu_percent?: number | null;
   memory_limit: number;
   memory_percent: number;
   memory_usage: number;

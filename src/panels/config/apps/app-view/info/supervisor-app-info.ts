@@ -671,7 +671,11 @@ class SupervisorAppInfo extends MobileAwareMixin(LitElement) {
 
   private _renderControlsCard() {
     const systemManaged = this._isSystemManaged(this._currentAddon);
-    const metrics = [
+    const metrics: {
+      description: string;
+      value?: number | null;
+      tooltip?: string;
+    }[] = [
       {
         description: this.i18n.localize(
           "ui.panel.config.apps.dashboard.cpu_usage"
@@ -688,6 +692,26 @@ class SupervisorAppInfo extends MobileAwareMixin(LitElement) {
         )}`,
       },
     ];
+    // Only for apps that use a GPU, and only the values the driver reports
+    if (this._metrics?.gpu_percent != null) {
+      metrics.push({
+        description: this.i18n.localize(
+          "ui.panel.config.apps.dashboard.gpu_usage"
+        ),
+        value: this._metrics.gpu_percent,
+      });
+    }
+    if (this._metrics?.gpu_memory_percent != null) {
+      metrics.push({
+        description: this.i18n.localize(
+          "ui.panel.config.apps.dashboard.gpu_memory_usage"
+        ),
+        value: this._metrics.gpu_memory_percent,
+        tooltip: `${bytesToString(this._metrics.gpu_memory_usage ?? 0)}/${bytesToString(
+          this._metrics.gpu_memory_limit ?? 0
+        )}`,
+      });
+    }
 
     return html`
       <ha-card class="controls" outlined>

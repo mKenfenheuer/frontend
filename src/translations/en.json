@@ -3334,6 +3334,8 @@
           "dashboard": {
             "cpu_usage": "CPU usage",
             "ram_usage": "RAM usage",
+            "gpu_usage": "GPU usage",
+            "gpu_memory_usage": "GPU memory usage",
             "controls": "Controls",
             "app_running": "App is running",
             "app_stopped": "App is stopped",
